@@ -10,6 +10,7 @@ class CustomContainer extends StatefulWidget {
   double? boarderRadius;
   double? boarderBlurRadius;
   double? margin;
+  double? padding;
 
   Widget? customWidget;
 
@@ -21,6 +22,7 @@ class CustomContainer extends StatefulWidget {
     this.boarderRadius,
     this.boarderBlurRadius,
     this.margin,
+    this.padding,
     this.customWidget,
   });
   @override
@@ -41,7 +43,8 @@ class _CustomContainerState extends State<CustomContainer> {
           ]),
       height: widget.height ?? MediaQuery.of(context).size.width/2,
       width: widget.width ?? MediaQuery.of(context).size.width,
-      margin: EdgeInsets.all( widget.margin ?? 10),
+      margin: EdgeInsets.all(widget.margin ?? 10),
+      padding: EdgeInsets.all(widget.padding ?? 10),
       child: widget.customWidget ?? Container(),
     );
   }

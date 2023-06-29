@@ -10,30 +10,51 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
+Fancy Containers
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Inbuilt container is a custom container which can be used in your Flutter app.
+Installation
 
-## Features
+    Add the latest version of package to your pubspec.yaml (and rundart pub get):
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+dependencies:
+fancy_containers: ^0.0.1
 
-## Getting started
+    Import the package and use it in your Flutter App.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+import 'package:inbuilt_container/inbuilt_container.dart';
 
-## Usage
+Example
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+There are a number of properties that you can modify:
 
-```dart
-const like = 'sample';
-```
+    height
+    width
+    background color
+    boarder radius
+    margin
+    padding
+    widget
 
-## Additional information
+Code
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+class _CustomContainerState extends State<CustomContainer> {
+    @override
+    Widget build(BuildContext context) {
+        return Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(widget.boarderRadius ?? 15),
+                color: widget.bgColor ?? Colors.white,
+                boxShadow: [
+                    BoxShadow(
+                        color: widget.bgBlurColor ?? Colors.greenAccent,
+                        blurRadius: widget.boarderBlurRadius ?? 2)
+                    ]),
+            height: widget.height ?? MediaQuery.of(context).size.width/2,
+            width: widget.width ?? MediaQuery.of(context).size.width,
+            margin: EdgeInsets.all(widget.margin ?? 10),
+            padding: EdgeInsets.all(widget.padding ?? 10), 
+            child: widget.customWidget ?? Container(),
+        );
+    }
+}
