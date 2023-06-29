@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
 class CustomContainer extends StatefulWidget {
-  double? height;
-  double? width;
+  final double? height;
+  final double? width;
 
-  Color? bgColor;
-  Color? bgBlurColor;
+  final Color? bgColor;
+  final Color? bgBlurColor;
 
-  double? boarderRadius;
-  double? boarderBlurRadius;
-  double? margin;
-  double? padding;
+  final double? boarderRadius;
+  final double? boarderBlurRadius;
+  final double? margin;
+  final double? padding;
 
-  Widget? customWidget;
+  final Widget? customWidget;
 
-  CustomContainer({
+  const CustomContainer({super.key,
     this.height,
     this.width,
     this.bgColor,
