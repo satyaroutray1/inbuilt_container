@@ -37,7 +37,7 @@ There are a number of properties that you can modify:
     widget
 
 Code
-
+```dart
 class _CustomContainerState extends State<CustomContainer> {
     @override
     Widget build(BuildContext context) {
@@ -58,3 +58,4 @@ class _CustomContainerState extends State<CustomContainer> {
         );
     }
 }
+```
