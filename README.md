@@ -18,7 +18,7 @@ Installation
     Add the latest version of package to your pubspec.yaml (and rundart pub get):
 
 dependencies:
-fancy_containers: ^0.0.1
+fancy_containers: ^0.0.2
 
     Import the package and use it in your Flutter App.
 
