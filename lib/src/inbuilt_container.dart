@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomContainer extends StatefulWidget {
+class InbuiltContainer extends StatefulWidget {
   final double? height;
   final double? width;
 
@@ -12,9 +12,9 @@ class CustomContainer extends StatefulWidget {
   final double? margin;
   final double? padding;
 
-  final Widget? customWidget;
+  final Widget? child;
 
-  const CustomContainer({super.key,
+  const InbuiltContainer({super.key,
     this.height,
     this.width,
     this.bgColor,
@@ -23,13 +23,13 @@ class CustomContainer extends StatefulWidget {
     this.boarderBlurRadius,
     this.margin,
     this.padding,
-    this.customWidget,
+    this.child,
   });
   @override
-  State<CustomContainer> createState() => _CustomContainerState();
+  State<InbuiltContainer> createState() => _InbuiltContainerState();
 }
 
-class _CustomContainerState extends State<CustomContainer> {
+class _InbuiltContainerState extends State<InbuiltContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -41,11 +41,11 @@ class _CustomContainerState extends State<CustomContainer> {
                 color: widget.bgBlurColor ?? Colors.greenAccent,
                 blurRadius: widget.boarderBlurRadius ?? 2)
           ]),
-      height: widget.height ?? MediaQuery.of(context).size.width/2,
+      height: widget.height ?? MediaQuery.of(context).size.width/3,
       width: widget.width ?? MediaQuery.of(context).size.width,
-      margin: EdgeInsets.all(widget.margin ?? 10),
+      margin: EdgeInsets.all(widget.margin ?? 20),
       padding: EdgeInsets.all(widget.padding ?? 10),
-      child: widget.customWidget ?? Container(),
+      child: Center(child: widget.child ?? Container()),
     );
   }
 }
