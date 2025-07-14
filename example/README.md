@@ -1,16 +1,29 @@
-# example
+# 📦 inbuilt_container
 
-A new Flutter project.
+A lightweight and reusable Flutter widget that wraps your content in a beautiful, consistent container — perfect for cards, tiles, and content blocks.  
+Easily control padding, margin, border radius, background color, and shadows with one line of code.
 
-## Getting Started
+[![Pub Version](https://img.shields.io/pub/v/inbuilt_container.svg)](https://pub.dev/packages/inbuilt_container)
+[![GitHub Stars](https://img.shields.io/github/stars/satyaroutray1/inbuilt_container?style=social)](https://github.com/satyaroutray1/inbuilt_container)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- ✅ Clean default design out of the box
+- 🎯 Fully customizable: padding, margin, border, color, shadow
+- 🧱 Ideal for content sections, cards, boxes
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🚀 Installation
+
+Add the package to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  inbuilt_container: ^0.0.5
+```
+Then run:
+  flutter pub get

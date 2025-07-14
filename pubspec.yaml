@@ -2,6 +2,8 @@ name: inbuilt_container
 description: inbuilt_container flutter package.
 version: 0.0.4
 homepage: https://github.com/satyaroutray1/inbuilt_container
+repository: https://github.com/satyaroutray1/inbuilt_container
+issue_tracker: https://github.com/satyaroutray1/inbuilt_container/issues
 
 environment:
   sdk: '>=2.19.6 <4.0.0'
